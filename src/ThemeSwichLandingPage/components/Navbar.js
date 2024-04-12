@@ -2,9 +2,19 @@
 import logo from "../imgs/Logo.svg"
 import "../styles/toggler.scss"
 import "../styles/navbar.scss"
+import { useContext } from "react"
+import { ThemeContext } from ".."
 const Navbar = () =>{
+    const { theme, setTheme } = useContext(ThemeContext);
+
+    const changeTheme = () =>{
+          // theme === "dark" ? setTheme("light") : setTheme("dark");
+          setTheme(prev => prev === "light" ? "dark" : "light");
+    }
+    const themeClassName = theme === 'dark' ? 'dark' : '';
+
     return (
-        <nav>
+        <nav className={themeClassName}>
             <img className="logo" src={logo} alt="logo"/>
             <ul className="navs">
                 <li className="navLinks">Home</li>
@@ -12,14 +22,15 @@ const Navbar = () =>{
                 <li className="navLinks">Contact Us</li>
             </ul>
             
-            <div className="rightNavs">
-            <div className="srch-cart-icon">
+            <div className={`rightNavs`}>
+            <div className={`srch-cart-icon ${themeClassName}`}>
                 <span className="material-icons">search</span>
                 <span className="material-icons">shopping_cart</span>
             </div>
             <button className="loginBtn">Login</button>
             {/* Toggler */}
-            <div className="toggler">
+            <button onClick={changeTheme}>change</button>
+            <div className="toggler" onClick={changeTheme}>
                 <input type="checkbox" className="checkbox" id="checkbox"/>
                 <label htmlFor="checkbox" className="checkbox-label">
                     <i className="fas fa-moon"></i>

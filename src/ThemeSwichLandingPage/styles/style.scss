@@ -1,12 +1,17 @@
+
+@import "./colors.scss";
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 .main-container{
-    background-color: #0a0e16;
+    background-color: $light-bg;
     width: 100vw;
     height: 100vh;
     display: flex;
     flex-direction: column;
+    &.dark {
+        background-color: $dark-bg;
+      }
 }

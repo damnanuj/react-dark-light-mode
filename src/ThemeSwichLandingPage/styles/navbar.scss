@@ -9,6 +9,10 @@ nav{
     justify-content: space-between;
     align-items: center;
     padding: 10px 80px;
+    color: $black-text;
+    &.dark{
+        color: $white;
+    }
     .logo{
         width:100px;
     }
@@ -19,10 +23,11 @@ nav{
         gap: 30px;
         list-style: none;
         .navLinks{
-            color: $white;
+            
             cursor: pointer;
             font-size: 17px;
             font-weight: 500;
+            
         }
         .navLinks:hover{
             color: $tomato-color;
@@ -34,13 +39,17 @@ nav{
         display: flex;
         gap: 30px;
         align-items: center;
+        
     }
     .srch-cart-icon{
-        color: $white;
+        color: $black-text;
         display: flex;
         gap: 20px;
         align-items: center;
         cursor: pointer;
+        &.dark{
+            color: $white;
+        }
     }
     .loginBtn{
         padding: 8px 20px;

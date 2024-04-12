@@ -8,10 +8,10 @@ export const ThemeContext = createContext("light");
 const ThemeApp = () => {
 
   const [theme, setTheme] = useState("light");
-
+  const themeClassName = theme === 'dark' ? 'dark' : '';
   return (
     <ThemeContext.Provider value={{ theme, setTheme }}>
-        <div className="main-container">
+        <div className={`main-container ${themeClassName}`} >
             <Navbar />
             <HeroSection />
             <ProductCards />
