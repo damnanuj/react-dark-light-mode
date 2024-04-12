@@ -1,20 +1,60 @@
+
+
+
+@import "./colors.scss";
 nav{
     display: flex;
-    border: 1px solid red;
+    // border: 1px solid red;
     height: 90px;
     justify-content: space-between;
     align-items: center;
     padding: 10px 80px;
+    .logo{
+        width:100px;
+    }
+    .navs{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 30px;
+        list-style: none;
+        .navLinks{
+            color: $white;
+            cursor: pointer;
+            font-size: 17px;
+            font-weight: 500;
+        }
+        .navLinks:hover{
+            color: $tomato-color;
+            transition: 0.3s;
+        }
+        
+    }
+    .rightNavs{
+        display: flex;
+        gap: 30px;
+        align-items: center;
+    }
+    .srch-cart-icon{
+        color: $white;
+        display: flex;
+        gap: 20px;
+        align-items: center;
+        cursor: pointer;
+    }
+    .loginBtn{
+        padding: 8px 20px;
+        border: 1px solid $tomato-color;
+        background-color: transparent;
+        border-radius: 5px;
+        color: $tomato-color;
+        transition: 0.3s;
+        cursor: pointer;
+    }
+    .loginBtn:hover{
+        background-color: $tomato-color;
+        color: $white;
+    }
 }
-.loginBtn{
-    padding: 8px 20px;
-    border: 1px solid tomato;
-   
-}
-.navs{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 20px;
-    list-style: none;
-}
+
+
