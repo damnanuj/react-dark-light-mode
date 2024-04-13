@@ -15,8 +15,10 @@ const Navbar = () =>{
 
     return (
         <nav className={themeClassName}>
+            
             <img className="logo" src={logo} alt="logo"/>
             <ul className="navs">
+                <span className="material-icons menuBtn">menu</span>
                 <li className="navLinks">Home</li>
                 <li className="navLinks">Explore</li>
                 <li className="navLinks">Contact Us</li>
@@ -24,8 +26,8 @@ const Navbar = () =>{
             
             <div className={`rightNavs`}>
             <div className={`srch-cart-icon ${themeClassName}`}>
-                <span className="material-icons">search</span>
-                <span className="material-icons">shopping_cart</span>
+                <span className="material-icons search">search</span>
+                <span className="material-icons cart">shopping_cart</span>
             </div>
             <button className="loginBtn">Login</button>
             {/* Toggler */}

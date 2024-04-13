@@ -5,13 +5,16 @@
 nav{
     display: flex;
     // border: 1px solid red;
-    height: 90px;
+    height: 70px;
     justify-content: space-between;
     align-items: center;
     padding: 10px 80px;
     color: $black-text;
     &.dark{
         color: $white;
+    }
+    .menuBtn{
+        display: none;
     }
     .logo{
         width:100px;
@@ -31,7 +34,8 @@ nav{
         }
         .navLinks:hover{
             color: $tomato-color;
-            transition: 0.3s;
+            transition: 0.3s ease-in;
+           
         }
         
     }
@@ -57,13 +61,57 @@ nav{
         background-color: transparent;
         border-radius: 5px;
         color: $tomato-color;
-        transition: 0.3s;
+        transition: 0.3s ease-in;
         cursor: pointer;
     }
     .loginBtn:hover{
         background-color: $tomato-color;
         color: $white;
+        box-shadow: 1px 1px 10px $tomato-color;
     }
 }
 
 
+@media (max-width:600px){
+    body{
+        background-color: red;
+    }
+    .loginBtn{
+        display: none;
+    }
+    .navs{
+        .navLinks{
+            display: none;
+        }
+    }
+    nav {
+        padding: 0px 10px;
+    }
+    .search{
+        display: none !important;
+    }
+    .rightPart{
+        display: none;
+    }
+    
+    .hero-container {
+       
+         padding: 0 0px !important; 
+       
+    }
+    .main-container {
+      
+        width: 100% !important;
+       
+    }
+    .leftPart {
+        width:95% !important;
+        gap: 12px !important;
+        justify-content: center !important;
+        align-items: center !important;
+    }
+    .leftPart div {
+       
+        margin-left: 0px !important;
+    }
+}

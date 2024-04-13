@@ -1,0 +1,57 @@
+@import "./colors.scss";
+.hero-container{
+    display: flex;
+    padding: 0 70px;
+    align-items: center;
+   justify-content: space-evenly;
+}
+.leftPart{
+    width: 50%;
+   
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    
+    
+    h1{
+        font-size: 60px;
+        font-family: poppins;
+        font-weight: 600;
+        .musicTxt{
+            color: $tomato-color;
+        }
+        &.dark{
+            color: $white;
+        }
+    }
+    p{
+        color: $gray-text;
+    }
+    div{
+        display: flex;
+        gap: 15px;
+        margin-left: 100px;
+        .shopBtn, .cartBtn{
+            border: 1px solid $tomato-color;
+            padding: 10px 30px;
+            border-radius: 5px;
+           color: $tomato-color;
+           font-weight: 600;
+           background-color: transparent;
+           cursor: pointer;
+           transition: 0.3s ease-in;
+
+        }
+        
+        
+        .shopBtn:hover, .cartBtn:hover{
+            background-color: $tomato-color;
+            color: $white;
+            box-shadow: 1px 1px 10px $tomato-color;
+        }
+    }
+    
+}
+.model{
+    width: 450px;
+}
