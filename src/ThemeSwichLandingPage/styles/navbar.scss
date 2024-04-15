@@ -2,6 +2,10 @@
 
 
 @import "./colors.scss";
+@import "./cards.scss";
+@import "./style.scss";
+@import "./hero.scss";
+@import "./toggler.scss";
 nav{
     display: flex;
     // border: 1px solid red;
@@ -85,7 +89,8 @@ nav{
         }
     }
     nav {
-        padding: 0px 10px;
+        padding: 0px 10px 0 60px;
+        position: relative;
     }
     .search{
         display: none !important;
@@ -106,10 +111,16 @@ nav{
         width:95% !important;
         gap: 12px !important;
         justify-content: center !important;
-        align-items: center !important;
+        align-items: center ;
     }
     .leftPart div {
-       
         margin-left: 0px !important;
+    }
+    .menuBtn{
+        display: block !important;
+        font-size:35px !important;
+        position: absolute;
+        left: 15px;
+        color: $black-text;
     }
 }
